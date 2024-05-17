@@ -5,21 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tour of DOM</title>
     <link rel="stylesheet" href="styles/style.css">
+    <style>
+        #fruits-title{
+            color: black;
+        }
+        .important-place{
+            color: blueviolet;
+        }
+
+    </style>
 </head>
 <body>
     <header>
         <h1>Welcome to my DOM</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ullam ad quis earum error amet cupiditate repellendus velit blanditiis, saepe vero. Accusamus recusandae blanditiis labore quibusdam mollitia sequi temporibus, laboriosam dicta.</p>
 
     </header>
     <main>
-        <h1>My Awesome DOM de baba</h1>
+        <section>
+            <h1>My Awesome DOM de baba</h1>
         <ul>
             <li>jalali set</li>
             <li>Shafayet</li>
             <li>bonobash</li>
         </ul>
+        </section>
+        <section>
+            <h1 id="fruits-title">Fruits I like</h1>
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Carrot</li>
+            </ul>
+        </section>
+        <section>
+            <h1 id="place-title">Place I like to visit</h1>
+            <ul>
+                <li class="important-places">Sundhorban</li>
+                <li class="important-places">Bandorban</li>
+                <li class="important-places">Rangamati</li>
+                <li>kataban</li>
+            </ul>
+        </section>
 
     </main>
     <script src="js/dom.js"></script>
+    <script>
+        // const student={
+        //     name: 'jabbar',
+        //     id:11,
+        //     study: function(time){
+        //         console.log(time, 'doing study from');
+        //     }
+        // }
+
+            const liCollection = document.getElementsByTagName('li');
+            // console.log(liCollection);
+
+            for(const li of liCollection){
+                // console.log(li.innerText);
+            }
+            const places = document.getElementsByClassName('important-places');
+            // console.log(places);
+            for(const place of places)(
+                console.log(place.innerText)
+            )
+    </script>
 </body>
 </html>

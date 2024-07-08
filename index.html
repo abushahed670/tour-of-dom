@@ -9,7 +9,7 @@
         #fruits-title{
             color: black;
         }
-        .important-place{
+        .important-places{
             color: blueviolet;
         }
 
@@ -30,7 +30,7 @@
             <li>bonobash</li>
         </ul>
         </section>
-        <section>
+        <section class="fruits-container">
             <h1 id="fruits-title">Fruits I like</h1>
             <ul>
                 <li>Apple</li>
@@ -39,7 +39,7 @@
             </ul>
         </section>
         <section>
-            <h1 id="place-title">Place I like to visit</h1>
+            <h1 id="places-title">Place I like to visit</h1>
             <ul>
                 <li class="important-places">Sundhorban</li>
                 <li class="important-places">Bandorban</li>
@@ -65,11 +65,25 @@
             for(const li of liCollection){
                 // console.log(li.innerText);
             }
+            const allHeadings = document.getElementsByTagName('h1');
+            for( const h1 of allHeadings){
+                // console.log(h1.innerText);
+            }
+
             const places = document.getElementsByClassName('important-places');
             // console.log(places);
             for(const place of places)(
                 console.log(place.innerText)
             )
+            const fruitsTitle = document.getElementById('fruits-title');
+            fruitsTitle.innerText ='fruits changed by js';
+
+            //querySelectorAll
+            const someLi = document.querySelectorAll('.fruits-container li');
+            // console.log(someLi);
+            for( const li of someLi){
+                console.log(li.innerText);
+            }
     </script>
 </body>
 </html>
